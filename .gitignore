@@ -1,1 +1,5 @@
 .bundle
+.sass-cache/
+tmp/
+output/
+crash.log
