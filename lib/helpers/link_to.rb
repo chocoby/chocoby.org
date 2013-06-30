@@ -1,7 +1,6 @@
 module LinkTo
-  include Nanoc::Helpers::LinkTo
-
-  def link_to_target_blank(text, target)
-    link_to(text, target, target: "_blank")
+  def link_to_target_blank(text, target, attributes = {})
+    attributes.merge! target: "_blank"
+    Nanoc::Helpers::LinkTo.link_to(text, target, attributes)
   end
 end
